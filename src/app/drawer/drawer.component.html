@@ -1,0 +1,14 @@
+<div (click)="closeDrawer()" [class.backdrop]="!!opened">
+  <div
+    class="drawer"
+    (click)="$event.stopPropagation()"
+    [class.opened]="!!opened"
+  >
+    <div class="drawer-header">
+      <h3 (click)="closeDrawer()">{{ title }}</h3>
+    </div>
+    <div class="drawer-body">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
